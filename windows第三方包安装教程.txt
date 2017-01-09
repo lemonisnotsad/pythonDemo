@@ -1,0 +1,9 @@
+1、用WinRAR等解压其中的kennethreitz-requests-fb01456到Python 3安装目录
+
+
+2、开始》运行》cmd打开一个命令行窗口：
+
+命令调用父目录下的python.exe执行requests的安装脚本即setup.py，参数是install
+
+
+3、在IDLE中输入import requests，如果没提示错误，那说明已经安装成功了！

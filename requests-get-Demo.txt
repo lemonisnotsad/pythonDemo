@@ -1,0 +1,13 @@
+#导入requests模块
+import requests
+myarr={"wd":"hello"}
+#使用requests的get方法发送get请求
+r=requests.get("http://www.baidu.com",params=myarr)
+myfile=open("C://Users//Administrator//Desktop//gly.html","wb+")
+#将r的请求写入本地文件，注意的是，r.content的是二进制的，而r.text的是unicode的值
+myfile.write(r.content)
+#打印访问的状态码
+print(r.status_code)
+#打印访问的地址
+print(r.url)
+myfile.close()

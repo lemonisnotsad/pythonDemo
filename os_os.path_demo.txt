@@ -1,0 +1,31 @@
+#导入mode，import与from...import的不同之处在于，简单说：
+# 如果你想要直接输入argv变量到你的程序中而每次使用它时又不想打sys，
+# 则可使用：from sys import argv
+# 一般说来，应该避免使用from..import而使用import语句，
+# 因为这样可以使你的程序更加易读，也可以避免名称的冲突
+#导入os操作系统包
+import os
+#如果是posix，说明系统是Linux、Unix或Mac OS X，如果是nt，就是Windows系统
+print(os.name)
+#获取当前系统的环境变量
+#print(os.environ)
+#进一步使用get获取具体值
+print(os.environ.get("os"))
+#打印绝对路径，空表示当前
+print(os.path.abspath(" "))
+#在该路径下创建一个目录
+os.mkdir("f://mypython")
+#删除该目录
+os.rmdir("f://mypython")
+#合并目录
+print(os.path.join("f://mython","gly.txt"))
+#拆分一个目录
+print(os.path.split("f://mython//gly.txt"))
+#在此基础上可以单独去拿一个拓展名
+print(os.path.splitext("f://mython//gly.txt"))
+#重命名文件
+#os.rename("f://mython//gly.txt","f://mython//hwy.txt")
+#删除文件
+os.remove("f://mython//hwy.txt")
+
+#值得注意的是，如果没有也不回去创建文件和文件夹

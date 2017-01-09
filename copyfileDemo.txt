@@ -1,0 +1,11 @@
+myfile=open("c://Users//Administrator//Desktop//gly.png","rb")
+point=myfile.read()
+myfile2=open("f://gly.png","wb")
+myfile2.write(point)
+#设置读写指针到开始
+#myfile.seek(0)
+#将缓冲区的数据刷新到文件
+myfile2.flush()
+#myfile.write("dog")
+myfile.close()
+myfile2.close()

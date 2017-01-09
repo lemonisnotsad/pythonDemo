@@ -1,0 +1,6 @@
+import requests
+#配置参数，使用get模拟百度搜索python
+pqyload = {'wd':'python'}
+r = requests.get('http://www.baidu.com/s',params = pqyload)
+#对于英文不进行修改，中文会进行特殊编码
+print(r.url)

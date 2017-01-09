@@ -1,0 +1,35 @@
+class Animal:
+    '''
+    带self的是本类实例的属性，不带self是类的属性,方法都是属于实例的,使用__标识
+    当前属性是私有属性，使用set和get访问器进行访问
+    '''
+    __money=100
+    def setMoney(self,money):
+        self.__money=money
+    def getMoney(self):
+        return self.__money
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+        print("hello,super...")
+    def show(self):
+        print("this is super show...")
+
+class Dog(Animal):
+    '''
+    这是继承的写法，继承只需要在子类后面加上括号，括号里写上类名即可，
+    子类的构造过程是先执行父类的构造，因此会默认一个空的父类构造
+    '''
+    def __init__(self):
+        self.name="zhangsan"
+        #可以使用父类名字显式的调用父类构造，且位置可以随意放
+        self.age=19
+        Animal("qianfeng",1000)
+    def show(self,name,age):
+        print("this is %s age is %d" %(name,age))
+dog = Dog()
+#dog.show('''zhangsan''')此列写法是错误的，的确python不支持重载
+dog.show('''zhangsan''',12)
+#print(Dog.money)私有属性子类无法访问
+dog.setMoney("hello")
+print(dog.getMoney())

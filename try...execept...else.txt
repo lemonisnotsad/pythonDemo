@@ -1,0 +1,9 @@
+info=input("please input a number...")
+#try...except...else异常，不支持自定义
+try:
+    myinfo=int(info)+1
+    print(myinfo)
+except TypeError as e:
+    print("your input is wrong...")
+else:
+    print("ok,we not find other things...")

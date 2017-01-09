@@ -1,0 +1,14 @@
+class People:
+    '''
+    运算符重载
+    '''
+    def __init__(self,name,age):
+        '构造方法'
+        self.name=name
+        self.age=age
+    #加法运算符重载，当然还有很多重载，return多个值的结果是一个元组,return后的输出无意义
+    def __add__(self, other):
+        return self.name+other.name,self.age+other.age
+people1=People("zhangsan",12)
+people2=People("zhangsan",12)
+print(people1+people2)

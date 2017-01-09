@@ -1,0 +1,7 @@
+import requests
+#上传图片，open的路径和方式
+mydate={'file':open("C:\\Users\\Administrator\\Desktop\\gly.png","rb")}
+#post提交方式，使用files进行传输
+req=requests.post("http://www.baidu.com",files=mydate)
+
+req.close()

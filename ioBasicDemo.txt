@@ -1,0 +1,13 @@
+#io操作，注意的是open第一个参数是文件的路径，第二个参数是权限，包括
+#w、r、a(追加)、w+(覆盖写入)、b(带有b的都是二进制的方式进行)
+#读写不能同时进行
+file=open("C://Users//Administrator//Desktop//gly.txt","r+")
+#写入
+file.write("i am your father")
+#获取文件名，路径
+#print(file.name)
+#阅读文件
+result=file.read()
+print(result)
+#关闭文件
+file.close()

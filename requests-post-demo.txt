@@ -1,0 +1,10 @@
+import requests
+myfile=open("c://Users//Administrator//Desktop//gly.html","rb+")
+mydate={'username':'13695315887','password':'318126'}
+#使用post请求，需要使用data进行传递参数
+#req=requests.post("https://www.sina.com.cn",data=mydate)
+#对于使用json传输的数据，我们也需要搞一个json
+req=requests.post("http://www.baidu.com",json=mydate)
+myfile.write(req.content)
+myfile.close()
+req.close()

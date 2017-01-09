@@ -1,0 +1,28 @@
+1、像if、while、def和class这样的复合语句，首行以关键字开始，以冒号( : )结束，该行之后的一行或多行代码构成代码组。
+2、python里面，不存在数据类型，直接使用如下语句就可以赋值：name = "Sam";
+3、python的五大数据类型：Numbers（数字）、String（字符串）、List（列表）、Tuple（元组）、Dictionary（字典）
+4、python的数字类型包含如下四种：int、long、float、complex。
+5、Python还支持复数，复数由实数部分和虚数部分构成，可以用a + bj,或者complex(a,b)表示， 复数的实部a和虚部b都是浮点型。
+
+6、所有的数据类型长度都可以无限，对的，如果你愿意，你可以让它无限长下去
+
+7、[]表示列表，()表示元组，唯一的区别就是元组不允许被改变
+
+8、for循环的语法如下：
+	name=('zhangsan','lisi','wangwu','maliu','zouqi')
+	for thisname in name:
+    		print(thisname)
+	else:
+	    print('this loop is be break')
+	
+	是的，你不需要分号大括号，能省的python都替你省了，但是你需要知道的是，else可以在python的for
+ 	循环中使用，他的意思很明显，当你的循环正确执行完成后，他才会被执行的，也就是说如果使用break强行终止的话，
+	你会爆炸
+
+9、传统上我的的输入你可以直接使用input()的方式进行，而且input的参数就是你想要给出的输出，这么做真的是很好的做法，你觉得呢？
+	name=input("please input your name:")
+	password=input("please input your password")
+	if name=='zhangsan'and password==123456:
+    		print('hello,zhangsan')
+	else:
+    		print('you should relogin')

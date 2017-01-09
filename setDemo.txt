@@ -1,0 +1,9 @@
+#set集合默认使用list进行填充,[]是列表，{}是字典，()是元组
+set=set([1,2,3,4,5])
+#添加方法
+set.add(6)
+#移除方法，没有就会报错
+set.remove(6)
+#set.replace(1,8),不可以用
+
+print(set)

@@ -1,0 +1,21 @@
+class Dog:
+    '''
+    类里面的注释我们使用这种写法，对于构造方法，我们使用__init__且必须包含self参数
+    在这里self相当于java中的this,同样的构造方法没有返回值
+    '''
+    def __init__(self,name):
+        self.name=name
+    def show(self):
+        return self.name
+    age = 13
+#创建对象时，无需使用new直接类名即可
+xiaoming=Dog("zhangsan")
+#在这里show是实例方法，必须与对象绑定，也就是self
+result = xiaoming.show()
+print(result)
+#这里的age属性是静态属性，与类绑定，只能使用类名访问，也就是static
+print(Dog.age)
+#包含一个字典，由类的数据属性组成
+print(xiaoming.__dict__)
+#类的文档字符串
+print(xiaoming.__doc__)

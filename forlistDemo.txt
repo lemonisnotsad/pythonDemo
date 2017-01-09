@@ -1,0 +1,13 @@
+def my(name,password):
+    "方法必须使用def进行定义，参数写在括号里，方法内的注释我们可以使用双引号"
+    for emp in name:
+        #我们使用格式化的方式连接字符串和非字符串类型的数据
+        print(name[emp]+'@@@'+emp+","+"%s" %(password))
+    password=123
+#对list而言，我们可以使用如此的键值对的方式，此时emp指的是key，而不写key时，指的是value
+name={'name1':"zhangsan",'name2':'lisi','name3':"wangwu",'name4':"""naliu"""}
+password=123456
+#基本类型的值传递，复杂类型的引用传递
+print(type(password))
+my(name,password)
+print(password)

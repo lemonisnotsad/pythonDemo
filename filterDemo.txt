@@ -1,0 +1,6 @@
+def add(n):
+    return n%2==0
+arr=[1,2,3,989,4,5,6,6,89,77,8,12,8]
+result=filter(add,arr)
+#同样是惰性的
+print(list(result))

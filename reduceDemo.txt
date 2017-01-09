@@ -1,0 +1,10 @@
+#部分版本的reduce不再自定义空间中，我们使用import的方式导入
+from functools import reduce
+#reduce使用如下
+def add(a,b):
+    return a*b
+#使用reduce,第一个参数值是方法名，后面的参数要求传入一个list
+arr=[1,2,3,4,5]
+result=reduce(add,arr)
+#直接进行打印即可
+print(result)
